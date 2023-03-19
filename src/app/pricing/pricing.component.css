@@ -1,0 +1,20 @@
+.pricing-section {
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+.pricing {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    min-height: 400px;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+h2 {
+    text-align: center;
+}

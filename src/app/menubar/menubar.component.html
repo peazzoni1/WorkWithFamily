@@ -1,0 +1,23 @@
+<p>
+  <mat-toolbar>
+     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Work With Family</span>
+    <span class="spacer"></span>
+    <div class="login-signup-wrapper">
+      <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+        <button mat-raised-button (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+          Log Out
+        </button>
+      </ng-container>
+  
+      <ng-template #loggedOut>
+        <button [routerLink]="['/pricing']" mat-flat-button color="primary">Pricing</button>
+        <button [routerLink]="['/assessment']" mat-stroked-button>Take Our Assessment</button>
+        <button mat-raised-button (click)="auth.loginWithPopup()">Log In / Sign up</button>
+      </ng-template>
+    </div>
+  </mat-toolbar>
+</p>
+  
