@@ -1,13 +1,23 @@
+
+<div id="formTitle">
+    <h2>
+        Assessment blurb...
+    </h2>
+</div>
 <div id="formContainer">
     <form [formGroup]="assessment" (ngSubmit)="onSubmit()">
         <ng-container *ngFor="let item of questions;let i = index">     
-            <div [hidden]="item.isHidden">
-                {{item.description}}
-                <mat-form-field appearance="outline">
-                <input matInput [formControlName]="item.type" placeholder="Your {{item.type}}"><br>
-                </mat-form-field>
+            <div *ngIf="!item.isHidden">
+                <div @nextQuestion>
+                    {{item.description}}
+                    <mat-form-field appearance="outline">
+                        <input matInput [formControlName]="item.type" placeholder="Your {{item.type}}"><br>
+                    </mat-form-field>
+                </div>
+                <div id="btnWrapper">
+                    <button mat-raised-button id="nextBtn" (click)="nextQuestion(item)">Next</button>
+                </div>
             </div> 
         </ng-container>
-        <button id="nextBtn" mat-raised-button>Next</button>
     </form>
 </div>

@@ -2,7 +2,14 @@
     background-color: lightskyblue;
 }
 
-#formContainer {
+#btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#formContainer, #formTitle {
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
