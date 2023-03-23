@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-pricing',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent {
-
+  constructor(public auth: AuthService) {}
 }

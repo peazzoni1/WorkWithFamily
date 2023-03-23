@@ -1,11 +1,17 @@
 <section class="pricing-section">
     <div class="pricing free-tier">
         <h2>Free</h2>
+        <mat-divider class="divider"></mat-divider>
+        <button mat-flat-button color="primary" (click)="auth.loginWithPopup()">Start For Free</button>
     </div>
     <div class="pricing basic-tier">
         <h2>Basic</h2>
+        <mat-divider class="divider"></mat-divider>
+        <button mat-flat-button color="primary">Start With Basic</button>
     </div>
     <div class="pricing premium-tier">
         <h2>Premium</h2>
+        <mat-divider class="divider"></mat-divider>
+        <button mat-flat-button color="primary">Start With Premium</button>
     </div>
 </section>

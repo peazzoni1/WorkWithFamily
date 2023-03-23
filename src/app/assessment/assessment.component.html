@@ -1,1 +1,13 @@
-<p>Assessment Page</p>
+<div id="formContainer">
+    <form [formGroup]="assessment" (ngSubmit)="onSubmit()">
+        <ng-container *ngFor="let item of questions;let i = index">     
+            <div [hidden]="item.isHidden">
+                {{item.description}}
+                <mat-form-field appearance="outline">
+                <input matInput [formControlName]="item.type" placeholder="Your {{item.type}}"><br>
+                </mat-form-field>
+            </div> 
+        </ng-container>
+        <button id="nextBtn" mat-raised-button>Next</button>
+    </form>
+</div>
