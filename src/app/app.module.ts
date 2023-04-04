@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
@@ -17,6 +18,7 @@ import { AssessmentComponent } from './assessment/assessment.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { CourseDashboardModule } from './course-dashboard/course-dashboard.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AssessmentTypeComponent } from './assessment/assessment-type/assessment-type.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LandingComponent,
     MenubarComponent,
     PricingComponent,
-    AssessmentComponent
+    AssessmentComponent,
+    AssessmentTypeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
+    MatRadioModule,
     MatButtonModule,
     MatToolbarModule,
     MatDividerModule,

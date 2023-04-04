@@ -5,19 +5,20 @@
     </h2>
 </div>
 <div id="formContainer">
-    <form [formGroup]="assessment" (ngSubmit)="onSubmit()">
-        <ng-container *ngFor="let item of questions;let i = index">     
-            <div *ngIf="!item.isHidden">
-                <div @nextQuestion>
-                    {{item.description}}
-                    <mat-form-field appearance="outline">
-                        <input matInput [formControlName]="item.type" placeholder="Your {{item.type}}"><br>
-                    </mat-form-field>
-                </div>
-                <div id="btnWrapper">
-                    <button mat-raised-button id="nextBtn" (click)="nextQuestion(item)">Next</button>
-                </div>
-            </div> 
+    <form [formGroup]="assessmentForm" (ngSubmit)="onSubmit()">
+        <div><b>{{questionGroup.questionGroupTitle}}</b></div>
+        <ng-container *ngFor="let question of questionGroup.questionList;let i = index">
+            <div *ngIf="!question.isHidden || questionGroup.displayAll">
+                <div>{{question.questionText}}</div>
+                <mat-radio-group class="choice-radio-group">
+                    <mat-radio-button class="choice-radio-button" (change)="questionSelected($event, question)" *ngFor="let choice of question.choices" [value]="choice.value">
+                        {{choice.text}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
         </ng-container>
+        <div id="btnWrapper">
+            <button mat-raised-button [disabled]="!questionAnswered" id="nextBtn" (click)="nextQuestion()">Next</button>
+        </div>
     </form>
 </div>

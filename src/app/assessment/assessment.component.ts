@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import {
   animate,
   animateChild,
@@ -9,6 +9,9 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import RisingGenAssessment from '../../assets/RisingGenAssessment.json';
+import { QuestionGroup } from '../models/question-group.model';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: 'app-assessment',
@@ -51,29 +54,52 @@ import {
   ],
 })
 export class AssessmentComponent implements OnInit {
-  assessment: FormGroup | any;
+  assessmentForm: FormGroup | any;
   loadQuestion:boolean = true;
-  questions = [
-    {type: "name", description : "What is your name ?", isHidden:false},
-    {type: "email", description : "What is your email ?", isHidden:true},
-    {type: "message", description : "What is your message ?", isHidden:true}
-  ]
+  assessment: QuestionGroup[] = RisingGenAssessment.questions;
+  questionGroup: QuestionGroup | any;
+  currentQuestion: any;
+  questionAnswered: boolean = false;
+  hasSubQuestions: boolean = false;
+  questionGroupIndex: number = 0;
 
   ngOnInit() {
-    this.assessment = new FormGroup({
-      name: new FormControl(''),
-      email: new FormControl(''),
-      message: new FormControl('')
-    });
+    this.questionGroup = this.assessment[this.questionGroupIndex];
+    let group: { [key: string]: any } = {}; 
+    // this.questions.forEach(q => {
+
+    //   if (q.subQuestions.length > 0) {
+    //     q.subQuestions.forEach(sq => {
+    //       const key: string = `question${sq.order.toString()}`;
+    //       group[key] = new FormControl(Validators.required);  
+    //     })
+    //   } else {
+    //     const key: string = `question${q.order.toString()}`;
+    //     group[key] = new FormControl(Validators.required);  
+    //   }
+    // });
+    this.assessmentForm = new FormGroup(group);
   }
 
   onSubmit() {
 
   }
 
-  nextQuestion(item: any) {
-    const currIndex = this.questions.indexOf(item);
-    this.questions[currIndex].isHidden = true;
-    this.questions[currIndex + 1].isHidden = false;
+  nextQuestion() {
+    const currIndex = this.questionGroup.questionList.indexOf(this.currentQuestion);
+    this.questionGroup.questionList[currIndex].isHidden = true;
+
+    if (currIndex + 1 === this.questionGroup.questionList.length) {
+      this.questionGroupIndex++; 
+      this.questionGroup = this.assessment[this.questionGroupIndex];
+    }
+    const nextQuestion = this.questionGroup.questionList[currIndex + 1];
+    nextQuestion.isHidden = false;
+    this.questionAnswered = false;
+  }
+
+  questionSelected(event: MatRadioChange, question: any){
+    this.currentQuestion = question;
+    this.questionAnswered = event.source.checked;
   }
 }

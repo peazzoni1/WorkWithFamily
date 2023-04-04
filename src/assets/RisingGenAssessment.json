@@ -1,0 +1,604 @@
+{
+    "questions" : [
+        {
+            "questionGroupTitle": "",
+            "groupNumber": 1,
+            "displayAll": false,
+            "questionList": [
+                {
+                    "questionText" : "When would you like to be running the day-to-day operations of your business?",
+                    "order": 1,
+                    "isHidden": false,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "1-2 Years"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "3-5 Years"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "6+ Years"
+                        }, 
+                        {
+                            "value": 4, 
+                            "order": 4, 
+                            "text": "I am planning to own, but not run, the business"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "When would you like to be a majority owner (if there is more than one person in your generation, when do you want your generation to be majority owners collectively)?",
+                    "order": 2,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "1-5 Years"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "6-10 Years"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "11+ Years"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "Do you know how much you/your generation will need to pay for the business?",
+                    "order": 3,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Yes"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "No"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "Are you/your generation willing and able to pay what the Leading  Generation needs to retire?",
+                    "order": 4,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Yes"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "No"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "I don’t know"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "questionGroupTitle": "How ready is the business for you to take over?",
+            "groupNumber": 2,
+            "displayAll": true,
+            "questionList": [
+                {
+                    "questionText" : "We have written job descriptions that we keep updated and use regularly",
+                    "order": 1,
+                    "isHidden": false,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We have teams that meet on a regular schedule",
+                    "order": 2,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We have written agendas and clear action steps for our meetings that we hold each other accountable to",
+                    "order": 3,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We have a budgeting and/or strategic planning process we go through each year and follow up on throughout the year",
+                    "order": 4,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We have clear systems and processes that are written down (and not just in my head)",
+                    "order": 5,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We are regularly profitable at, or above, industry averages",
+                    "order": 6,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },{
+                    "questionText" : "Our key leaders know where we want to be in 10 years",
+                    "order": 7,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },{
+                    "questionText" : "Our business model and organizational structure can handle growth over the next 10 years",
+                    "order": 8,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "questionGroupTitle" : "How ready is your family for hard conversations around transition?",
+            "groupNumber": 3,
+            "displayAll": true,
+            "questionList": [
+                {
+                    "questionText" : "We are direct, respectful, and comfortable giving feedback when a family member has done something that hurts us or we feel was a mistake.",
+                    "order": 1,
+                    "isHidden": false,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We are able to handle feedback without defensiveness and try to take feedback seriously when it’s given to us.",
+                    "order": 2,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We like each other and spend time together outside our work relationship.",
+                    "order": 3,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We have had less than 3 conflicts in the past 6 months that we couldn’t resolve or didn’t end in silence or violence (not talking about it or yelling at each other in an unhealthy way)",
+                    "order": 4,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We meet regularly to talk openly about our feelings and what’s working/not working in our relationships",
+                    "order": 5,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "questionGroupTitle" : "How ready are you/your generation to take over?",
+            "groupNumber": 4,
+            "displayAll": true,
+            "questionList": [
+                {
+                    "questionText" : "I am committed to do what it takes to make this business successful",
+                    "order": 1,
+                    "isHidden": false,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "I have the skills and abilities to run the company successfully (or you have a non-family leader in place)",
+                    "order": 2,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We, as a generation, are aligned with each other in the direction and culture of the company and meet regularly to discuss them (if multiple)",
+                    "order": 3,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "We, as a generation, get along at work, work well together, and don’t have any jealousy or power struggles (if multiple)",
+                    "order": 4,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "I understand the responsibilities of ownership",
+                    "order": 5,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "I am self-aware and understand how other people see me",
+                    "order": 6,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },{
+                    "questionText" : "I am emotionally mature and am able to express my emotions in clear and reasonable ways.",
+                    "order": 7,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                },
+                {
+                    "questionText" : "I have earned the respect of the non-family employees",
+                    "order": 8,
+                    "isHidden": true,
+                    "choices" :
+                    [
+                        {
+                            "value": 1, 
+                            "order": 1, 
+                            "text": "Very True"
+                        },
+                        {
+                            "value": 2, 
+                            "order": 2, 
+                            "text": "Somewhat True"
+                        },
+                        {
+                            "value": 3, 
+                            "order": 3, 
+                            "text": "Not True"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

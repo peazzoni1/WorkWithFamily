@@ -6,11 +6,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 #formContainer, #formTitle {
-  margin-top: 10%;
+  margin-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+#questionContainer {
+  text-align: center;
 }
