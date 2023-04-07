@@ -1,4 +1,4 @@
 <ng-container>
-    <button mat-stroked-button>Rising Gen</button>
-    <button mat-stroked-button>Leading Gen</button>
+    <button [routerLink]="['/assessment']" [queryParams]="{assessmentType: 'rising-gen'}" mat-stroked-button>Rising Gen</button>
+    <button [routerLink]="['/assessment']" [queryParams]="{assessmenType: 'leading-gen'}" mat-stroked-button>Leading Gen</button>
 </ng-container>

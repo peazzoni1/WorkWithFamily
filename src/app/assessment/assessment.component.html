@@ -5,20 +5,32 @@
     </h2>
 </div>
 <div id="formContainer">
+    
     <form [formGroup]="assessmentForm" (ngSubmit)="onSubmit()">
-        <div><b>{{questionGroup.questionGroupTitle}}</b></div>
-        <ng-container *ngFor="let question of questionGroup.questionList;let i = index">
-            <div *ngIf="!question.isHidden || questionGroup.displayAll">
-                <div>{{question.questionText}}</div>
-                <mat-radio-group class="choice-radio-group">
-                    <mat-radio-button class="choice-radio-button" (change)="questionSelected($event, question)" *ngFor="let choice of question.choices" [value]="choice.value">
-                        {{choice.text}}
-                    </mat-radio-button>
-                </mat-radio-group>
+        <div *ngIf="!formComplete">
+            <div><b>{{questionGroup.questionGroupTitle}}</b></div>
+            <ng-container *ngFor="let question of questionGroup.questionList;let i = index">
+                <div *ngIf="!question.isHidden || questionGroup.displayAll">
+                    <div>{{question.questionText}}</div>
+                    <mat-radio-group class="choice-radio-group">
+                        <mat-radio-button class="choice-radio-button" (change)="questionSelected($event, question)" *ngFor="let choice of question.choices" [value]="choice.value">
+                            {{choice.text}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+            </ng-container>
+            <div id="btnWrapper">
+                <button mat-raised-button [disabled]="!questionAnswered" id="nextBtn" (click)="nextQuestion()">Next</button>
             </div>
-        </ng-container>
-        <div id="btnWrapper">
-            <button mat-raised-button [disabled]="!questionAnswered" id="nextBtn" (click)="nextQuestion()">Next</button>
+        </div>
+        <div *ngIf="formComplete">
+            <h2>Thanks for completing the assessment!<br>Please enter your email to receive the results:</h2>
+            <mat-form-field>
+                <input type="email" matInput placeholder="me@example.com">
+            </mat-form-field>
+            <div id="btnWrapper">
+                <button mat-raised-button >Get My Results!</button>
+            </div>
         </div>
     </form>
 </div>

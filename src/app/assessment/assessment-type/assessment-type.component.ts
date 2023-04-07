@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './assessment-type.component.html',
   styleUrls: ['./assessment-type.component.css']
 })
+
 export class AssessmentTypeComponent {
 
 }

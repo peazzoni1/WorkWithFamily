@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {
   animate,
   animateChild,
@@ -56,16 +57,28 @@ import { MatRadioChange } from '@angular/material/radio';
 export class AssessmentComponent implements OnInit {
   assessmentForm: FormGroup | any;
   loadQuestion:boolean = true;
-  assessment: QuestionGroup[] = RisingGenAssessment.questions;
+  assessment: QuestionGroup[] | any;
+  assessmentType: string | any;
   questionGroup: QuestionGroup | any;
   currentQuestion: any;
   questionAnswered: boolean = false;
   hasSubQuestions: boolean = false;
+  formComplete: boolean = false;
   questionGroupIndex: number = 0;
+  
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.assessmentType = params['assessmentType'];
+    });
+
+    this.assessment = this.assessmentType === 'rising-gen' ? RisingGenAssessment.questions : null;
     this.questionGroup = this.assessment[this.questionGroupIndex];
     let group: { [key: string]: any } = {}; 
+
     // this.questions.forEach(q => {
 
     //   if (q.subQuestions.length > 0) {
@@ -90,8 +103,13 @@ export class AssessmentComponent implements OnInit {
     this.questionGroup.questionList[currIndex].isHidden = true;
 
     if (currIndex + 1 === this.questionGroup.questionList.length) {
-      this.questionGroupIndex++; 
-      this.questionGroup = this.assessment[this.questionGroupIndex];
+      if (this.questionGroupIndex + 1 === this.assessment.length) {
+        this.formComplete = true;
+      }
+      else {
+        this.questionGroupIndex++; 
+        this.questionGroup = this.assessment[this.questionGroupIndex];
+      }
     }
     const nextQuestion = this.questionGroup.questionList[currIndex + 1];
     nextQuestion.isHidden = false;
