@@ -1,0 +1,42 @@
+
+name: $(date:yyyyMMdd)$(rev:.r)
+stages:
+  - stage: Build
+    jobs:
+      - job: Job_1
+        displayName: Agent job 1
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+          - task: Npm@1
+            displayName: npm install
+            inputs:
+              command: 'ci'
+              workingDir: '$(System.DefaultWorkingDirectory)'
+      - job: Job_2
+        displayName: Build Docker Image
+        pool:
+          vmImage: ubuntu-latest
+        dependsOn:
+          - Job_1
+        steps:
+          - task: Docker@2
+            displayName: 'Build image'
+            inputs:
+              containerRegistry: workwithfamily
+              repository: workwithfamilyUI
+              command: build
+              Dockerfile: './Dockerfile'
+              tags: |
+                $(Build.BuildNumber)
+                Latest
+
+          - task: Docker@2
+            displayName: 'Push image to registry'
+            inputs:
+              containerRegistry: workwithfamily
+              repository: workwithfamilyUI
+              command: push
+              tags: |
+                $(Build.BuildNumber)-dev
