@@ -4,7 +4,7 @@ stages:
   - stage: Build
     jobs:
       - job: Job_1
-        displayName: Agent job 1
+        displayName: Build and Deploy Image
         pool:
           vmImage: ubuntu-latest
         steps:
@@ -14,13 +14,6 @@ stages:
             inputs:
               command: 'ci'
               workingDir: '$(System.DefaultWorkingDirectory)'
-      - job: Job_2
-        displayName: Build Docker Image
-        pool:
-          vmImage: ubuntu-latest
-        dependsOn:
-          - Job_1
-        steps:
           - task: Docker@2
             displayName: 'Build image'
             inputs:
