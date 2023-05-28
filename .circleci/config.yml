@@ -1,26 +1,11 @@
-
-name: $(date:yyyyMMdd)$(rev:.r)
-stages:
-  - stage: Build
+version: '2.1'
+orbs:
+  azure-acr: circleci/azure-acr@0.2.1
+workflows:
+  build-and-publish-docker-image:
     jobs:
-      - job: Job_1
-        displayName: Build and Deploy Image
-        pool:
-          vmImage: ubuntu-latest
-        steps:
-          - checkout: self
-          - task: Npm@1
-            displayName: npm install
-            inputs:
-              command: 'ci'
-              workingDir: '$(System.DefaultWorkingDirectory)'
-          - task: Docker@2
-            displayName: 'Build image'
-            inputs:
-              containerRegistry: 'WWF Container Registry'
-              repository: 'workwithfamilyUI'
-              command: 'buildAndPush'
-              Dockerfile: './Dockerfile'
-              tags: |
-                $(Build.BuildNumber)
-                Latest
+      - azure-acr/build-and-push-image:
+          login-server-name: workwithfamily.azurecr.io
+          registry-name: workwithfamily
+          repo: workwithfamilyUI
+          tag: $latest
