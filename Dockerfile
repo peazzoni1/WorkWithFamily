@@ -1,5 +1,4 @@
 ### STAGE 1: Build Environment ###
-
 # Base image as "builder"
 FROM node:16-alpine3.16 as builder
 

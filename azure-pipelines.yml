@@ -31,7 +31,6 @@ stages:
               tags: |
                 $(Build.BuildNumber)
                 Latest
-
           - task: Docker@2
             displayName: 'Push image to registry'
             inputs:
