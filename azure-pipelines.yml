@@ -24,18 +24,10 @@ stages:
           - task: Docker@2
             displayName: 'Build image'
             inputs:
-              containerRegistry: workwithfamily
-              repository: workwithfamilyUI
-              command: build
+              containerRegistry: 'WWF Container Registry'
+              repository: 'workwithfamilyUI'
+              command: 'buildAndPush'
               Dockerfile: './Dockerfile'
               tags: |
                 $(Build.BuildNumber)
                 Latest
-          - task: Docker@2
-            displayName: 'Push image to registry'
-            inputs:
-              containerRegistry: workwithfamily
-              repository: workwithfamilyUI
-              command: push
-              tags: |
-                $(Build.BuildNumber)-dev
