@@ -7,5 +7,5 @@ workflows:
       - azure-acr/build-and-push-image:
           login-server-name: workwithfamily.azurecr.io
           registry-name: workwithfamily
-          repo: workwithfamilyUI
+          repo: workwithfamilyui
           tag: latest
