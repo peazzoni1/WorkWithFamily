@@ -32,7 +32,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN rm -rf /usr/share/nginx/html/*
 
 ## Copy artifcat build from the build environment
-COPY --from=builder /ng-app/dist/work-with-family-ui /usr/share/nginx/html
+COPY --from=builder /ng-app/dist/work-with-family /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
