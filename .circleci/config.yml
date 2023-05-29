@@ -8,4 +8,4 @@ workflows:
           login-server-name: workwithfamily.azurecr.io
           registry-name: workwithfamily
           repo: workwithfamilyUI
-          tag: $latest
+          tag: latest
